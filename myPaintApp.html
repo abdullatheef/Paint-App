@@ -50,14 +50,16 @@ function linewidth(){c.beginPath();var s=document.forms["f"]["pix"].value;c.line
 <button id='7' style="background-color:#d3d3d3" onmouseover="white(id)" onmouseout="reset(id)" onclick="pencil()">Pencil</button>
 <button id='2' style="background-color:#d3d3d3" onmouseover="white(id)" onmouseout="reset(id)" onclick="rectangle()">Rectangle</button>
 <button id='5' style="background-color:#d3d3d3" onmouseover="white(id)" onmouseout="reset(id)" onclick="circle()">Circle</button>
-Fill or Stroke?
 
-<input id='3' type="radio" style="background-color:#d3d3d3" onmouseover="white(id)" onmouseout="reset(id)" onclick="strok()" value='0'>Border
-<input id='3' type="radio" style="background-color:#d3d3d3" onmouseover="white(id)" onmouseout="reset(id)" onclick="fill()" value='1'>Fill
+
 <button id='9' style="background-color:#d3d3d3" onmouseover="white(id)" onmouseout="reset(id)" onclick="spray()">Spray</button>
 <button id='8' style="background-color:#d3d3d3" onmouseover="white(id)" onmouseout="reset(id)" onclick="erase()">Eraser</button>
 <button id='10' style="background-color:#d3d3d3" onmouseover="white(id)" onmouseout="reset(id)" onclick="undo()">Undo</button>
-<form name="f">Stroke Width(pixel)<input type="text" name="pix"></input><input type="button" onclick="linewidth()" value="ok"></button></form>
+<form name="fo" action="">Fill or Stroke?
+<input type="radio" name="sex" onclick=fill() value="1">fill
+<input type="radio" name="sex" onclick=strok() value="0" checked="checked">border
+</form>
+<form name="f">Stroke Width(pixel)<input type="text" size="5" name="pix"></input><input type="button" onclick="linewidth()" value="ok"></button></form>
 <center>
 <table border=2 bgcolor=#FFFFFF align="center">
 <td><div onclick = "color('#0000ff')" style ="width:20px;height:20px;background-color:#0000ff"></div><td>
@@ -95,4 +97,5 @@ Fill or Stroke?
 <tr>.</tr>
 <center><button id='1' style="background-color:lightblue" onmouseover="white(id)" onmouseout="reset(id)" onclick="clrscr()">Clear Screen</button>
 </center>
+
 </html>
